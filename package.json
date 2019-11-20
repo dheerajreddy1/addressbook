@@ -1,0 +1,24 @@
+{
+  "name": "addressbook",
+  "version": "1.0.0",
+  "description": "Addressbook API and database",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dheerajreddy1/addressbook.git"
+  },
+  "author": "dheeraj",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dheerajreddy1/addressbook/issues"
+  },
+  "homepage": "https://github.com/dheerajreddy1/addressbook#readme",
+  "dependencies": {
+    "nano": "^8.1.0",
+    "pg": "^7.14.0",
+    "sequelize": "^5.21.2"
+  }
+}
