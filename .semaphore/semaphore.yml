@@ -1,40 +1,13 @@
 version: v1.0
-name: Addressbook
+name: Initial Pipeline
 agent:
   machine:
     type: e1-standard-2
     os_image: ubuntu1804
 blocks:
-  - name: Install dependencies
+  - name: 'Block #1'
     task:
-      env_vars:
-        - name: NODE_ENV
-          value: test
-      prologue:
-        commands:
-          - checkout
-          - nvm use        
       jobs:
-        - name: npm install and cache
+        - name: 'Job #1'
           commands:
-            - cache restore
-            - npm install
-            - cache store     
-  - name: Tests
-    task:
-      env_vars:
-        - name: NODE_ENV
-          value: test
-      prologue:
-        commands:
-          - checkout
-          - nvm use
-          - cache restore             
-      jobs:
-        - name: Static test
-          commands:
-            - npm run lint    
-        - name: Unit test
-          commands:
-            - sem-service start postgres
-            - npm run test    
+            - checkout
